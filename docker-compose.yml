@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  pyledger:
+    container_name: pyledger-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: sh
+    tty: true
+    stdin_open: true
+    volumes:
+      - '.:/var/lib/pyledger'
