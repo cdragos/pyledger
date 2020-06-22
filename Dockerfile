@@ -5,8 +5,8 @@ FROM nickgryg/alpine-pandas:3.8
 WORKDIR /var/lib/pyledger
 
 # Copy requirements file and install dependencies.
-COPY requirements.txt ./
-RUN pip install -r requirements.txt
+COPY requirements-dev.txt ./
+RUN pip install -r requirements-dev.txt
 
 # Copy the application files.
 COPY . .
